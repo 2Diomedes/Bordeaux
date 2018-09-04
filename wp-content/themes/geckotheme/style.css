@@ -1,2 +1,9 @@
-@import url("../twentyseventeen/style.css");body{background:black}
+/*!
+Theme Name: geckotheme
+Template: twentyseventeen
+*/
+@import url("../twentyseventeen/style.css");
+body {
+  background: red; }
+
 /*# sourceMappingURL=style.css.map */
