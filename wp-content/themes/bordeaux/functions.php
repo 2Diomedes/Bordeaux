@@ -15,6 +15,12 @@ if ( ! function_exists( 'bordeaux_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
+
+	function bordeaux_enqueue() {
+	   wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+	   wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+	}
+
 	function bordeaux_setup() {
 		/*
 		 * Make theme available for translation.

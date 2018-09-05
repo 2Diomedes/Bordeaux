@@ -1,0 +1,25 @@
+@mixin nest() {
+    display: grid;
+    grid-gap: 0;
+}
+
+@mixin noMP() {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin aFormating() {
+    text-decoration: none;
+    color: black;
+}
+
+@mixin ulFormating() {
+    list-style-type: none;
+    @include noMP;
+}
+
+@mixin divFlexEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
