@@ -4,16 +4,13 @@
     grid-template-columns: 2fr 1fr 3fr;
     grid-template-areas: "a . c""a b d";
     font-family: $PlayFont;
-
     .flexing1 {
         grid-area: a;
         @include divFlexEnd;
-
         a {
             @include aFormating;
             color: #d82142;
             @include divFlexEnd;
-
             h1 {
                 @include noMP;
                 font-size: 7rem;
@@ -22,35 +19,28 @@
             }
         }
     }
-
     .flexing2 {
         @include divFlexEnd;
         grid-area: b;
-
         .headL {
             @include divFlexEnd;
             margin-bottom: 2.2rem;
-
             a {
                 @include aFormating;
                 color: #666666;
-
                 h6 {
                     i {
                         padding-right: 0.5rem;
                     }
-
                     @include noMP;
                     padding-top: 0.5rem;
                 }
             }
         }
     }
-
     .flexing3 {
         grid-area: c;
         @include divFlexEnd;
-
         .headN {
             @include ulFormating;
             @include noMP;
@@ -59,11 +49,9 @@
             justify-content: flex-end;
             flex-wrap: wrap;
             text-align: left;
-
             li {
                 font-size: 1rem;
                 margin: 0rem;
-
                 a {
                     @include aFormating;
                     color: #d82142;
@@ -71,26 +59,62 @@
             }
         }
     }
-
     .flexing4 {
         grid-area: d;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-
         .form-inline {
             @include noMP;
             width: 100%;
             margin-top: 1rem;
-
             input {
                 width: 80%;
                 height: 3rem;
             }
-
             button {
                 height: 3rem;
             }
         }
     }
+}
+
+#site-navigation {
+    background-color: #666666;
+    padding: 1% 0;
+    border: 1px outset grey;
+    text-align: center;
+    border-radius: 5px;
+    ul {
+        background-color: #666666;
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        li {
+            display: flex;
+            justify-content: space-around;
+            width: 19%;
+            a {
+                text-align: center;
+                @include aFormating;
+                color: white;
+            }
+        }
+        li:hover{
+            background-color: rgb(230, 52, 52);
+            ul {
+                width: 100%;
+                li {
+                    width: 100%;
+                    background-color: white;
+                    a {
+                        color: #615c5c;
+                    }
+                }
+            }
+
+        }
+    }
+
+
 }
